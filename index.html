@@ -628,7 +628,7 @@
                 url("hero-cinema.png");
 
             background-size: auto 46%;
-            background-position: 50% 26%;
+            background-position: center 26%;
             background-repeat: no-repeat;
         }
 
@@ -742,9 +742,9 @@
             height: 180px;
         }
     }
-        /* ===== Fix hard color break between Hero and Products ===== */
+        /* ===== Restore smooth clean hero + products flow ===== */
 
-/* نهاية الهيرو تصير عنابي/أسود ناعم بدل أسود مفاجئ */
+/* الهيرو يرجع واضح بدون طبقة غامقة زيادة */
 .hero-cinematic::after {
     content: "";
     position: absolute;
@@ -754,21 +754,21 @@
 
     background:
         radial-gradient(
-            circle at 50% 34%,
-            rgba(253, 139, 0, 0.12),
-            transparent 38%
+            circle at 50% 32%,
+            rgba(253, 139, 0, 0.08),
+            transparent 36%
         ),
         linear-gradient(
             to bottom,
             transparent 0%,
-            rgba(5, 3, 7, 0.10) 36%,
-            rgba(20, 7, 10, 0.58) 62%,
-            rgba(38, 12, 12, 0.82) 82%,
-            rgba(28, 9, 12, 0.96) 100%
+            transparent 58%,
+            rgba(5, 3, 7, 0.38) 78%,
+            rgba(5, 3, 7, 0.86) 92%,
+            #050307 100%
         );
 }
 
-/* بداية قسم الاشتراكات تكمل نفس التدرج */
+/* قسم المنتجات يبدأ من نفس اللون بدون خط مفاجئ */
 #products {
     position: relative;
     overflow: hidden;
@@ -776,41 +776,35 @@
     background:
         radial-gradient(
             circle at 35% 0%,
-            rgba(253, 139, 0, 0.16),
+            rgba(253, 139, 0, 0.10),
             transparent 34%
-        ),
-        radial-gradient(
-            circle at 70% 8%,
-            rgba(255, 85, 64, 0.12),
-            transparent 36%
         ),
         linear-gradient(
             to bottom,
-            rgba(28, 9, 12, 0.96) 0%,
-            rgba(42, 13, 13, 0.88) 20%,
-            rgba(36, 11, 13, 0.74) 42%,
-            rgba(18, 7, 10, 0.58) 68%,
-            rgba(5, 3, 7, 0.28) 100%
+            #050307 0%,
+            rgba(20, 8, 10, 0.92) 18%,
+            rgba(39, 12, 12, 0.70) 42%,
+            rgba(18, 7, 10, 0.50) 68%,
+            rgba(5, 3, 7, 0.18) 100%
         );
 }
 
-/* طبقة دمج فوق الاشتراكات تخفي أي خط */
+/* طبقة خفيفة جدًا فقط لدمج البداية */
 #products::before {
     content: "";
     position: absolute;
-    top: -220px;
+    top: -120px;
     left: 0;
     right: 0;
-    height: 340px;
+    height: 220px;
     pointer-events: none;
     z-index: 0;
 
     background:
         linear-gradient(
             to bottom,
-            rgba(28, 9, 12, 0.98) 0%,
-            rgba(39, 12, 12, 0.80) 36%,
-            rgba(48, 15, 13, 0.42) 70%,
+            rgba(5, 3, 7, 1) 0%,
+            rgba(5, 3, 7, 0.72) 42%,
             rgba(5, 3, 7, 0) 100%
         );
 }
@@ -820,22 +814,22 @@
     z-index: 2;
 }
 
-/* ===== Mobile smooth continuation ===== */
+/* الجوال */
 @media (max-width: 768px) {
     .hero-cinematic::after {
         background:
             radial-gradient(
                 circle at 50% 30%,
-                rgba(253, 139, 0, 0.10),
-                transparent 36%
+                rgba(253, 139, 0, 0.06),
+                transparent 34%
             ),
             linear-gradient(
                 to bottom,
                 transparent 0%,
-                rgba(5, 3, 7, 0.16) 32%,
-                rgba(20, 7, 10, 0.60) 56%,
-                rgba(38, 12, 12, 0.86) 78%,
-                rgba(28, 9, 12, 0.98) 100%
+                rgba(5, 3, 7, 0.08) 34%,
+                rgba(5, 3, 7, 0.48) 58%,
+                rgba(5, 3, 7, 0.88) 80%,
+                #050307 100%
             );
     }
 
@@ -843,27 +837,27 @@
         background:
             radial-gradient(
                 circle at 50% 0%,
-                rgba(253, 139, 0, 0.13),
+                rgba(253, 139, 0, 0.08),
                 transparent 36%
             ),
             linear-gradient(
                 to bottom,
-                rgba(28, 9, 12, 0.98) 0%,
-                rgba(42, 13, 13, 0.86) 24%,
-                rgba(30, 10, 12, 0.70) 48%,
-                rgba(5, 3, 7, 0.34) 100%
+                #050307 0%,
+                rgba(22, 8, 10, 0.90) 26%,
+                rgba(38, 12, 12, 0.60) 52%,
+                rgba(5, 3, 7, 0.22) 100%
             );
     }
 
     #products::before {
-        top: -180px;
-        height: 290px;
+        top: -100px;
+        height: 190px;
 
         background:
             linear-gradient(
                 to bottom,
-                rgba(28, 9, 12, 1) 0%,
-                rgba(42, 13, 13, 0.76) 42%,
+                rgba(5, 3, 7, 1) 0%,
+                rgba(5, 3, 7, 0.70) 46%,
                 rgba(5, 3, 7, 0) 100%
             );
     }
