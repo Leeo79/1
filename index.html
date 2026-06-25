@@ -264,6 +264,85 @@
             url("hero-cinema.png");
     }
 }
+        /* ===== Mobile Hero Fix ===== */
+@media (max-width: 768px) {
+
+    .hero-cinematic {
+        min-height: 760px;
+        padding-top: 170px;
+        padding-bottom: 70px;
+
+        background-size: auto 46%;
+        background-position: left 95px;
+        background-repeat: no-repeat;
+
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(5, 3, 7, 0.18) 0%,
+                rgba(5, 3, 7, 0.45) 32%,
+                rgba(5, 3, 7, 0.92) 52%,
+                #050307 100%
+            ),
+            url("hero-cinema.png");
+    }
+
+    .hero-cinematic .max-w-container-max {
+        display: block;
+    }
+
+    .hero-cinematic [data-aos="fade-left"] {
+        text-align: center;
+        max-width: 100%;
+        margin: 0 auto;
+        padding-top: 110px;
+    }
+
+    .hero-cinematic h1 {
+        font-size: 38px !important;
+        line-height: 1.15 !important;
+        letter-spacing: 0 !important;
+    }
+
+    .hero-cinematic h1 .high-impact-glow,
+    .hero-cinematic h1 span:first-child {
+        font-size: 34px !important;
+        margin-bottom: 12px !important;
+    }
+
+    .hero-cinematic p {
+        font-size: 16px !important;
+        line-height: 1.9 !important;
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cinematic .flex.flex-wrap.gap-3 {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .hero-cinematic .flex.flex-wrap.gap-5 {
+        flex-direction: column;
+        gap: 14px;
+        align-items: stretch;
+        max-width: 330px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-cinematic a {
+        font-size: 18px !important;
+        padding: 16px 22px !important;
+        justify-content: center;
+    }
+
+    .hero-cinematic::after {
+        background:
+            linear-gradient(to bottom, transparent 55%, #050307 100%);
+    }
+}
     </style>
 </head>
 <body class="text-on-surface selection:bg-primary selection:text-white">
