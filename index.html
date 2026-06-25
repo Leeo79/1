@@ -375,6 +375,91 @@
             linear-gradient(to bottom, transparent 55%, #050307 100%);
     }
 }
+        /* ===== Final Mobile + Laptop Smooth Blend Override ===== */
+
+/* اللابتوب */
+@media (min-width: 769px) {
+    .hero-cinematic {
+        min-height: 760px !important;
+        background-color: transparent !important;
+
+        background-image:
+            linear-gradient(
+                90deg,
+                rgba(5, 3, 7, 0.00) 0%,
+                rgba(5, 3, 7, 0.10) 28%,
+                rgba(5, 3, 7, 0.45) 50%,
+                rgba(5, 3, 7, 0.82) 72%,
+                rgba(5, 3, 7, 0.98) 100%
+            ),
+            linear-gradient(
+                to bottom,
+                rgba(5, 3, 7, 0) 0%,
+                rgba(5, 3, 7, 0) 50%,
+                rgba(5, 3, 7, 0.35) 68%,
+                rgba(5, 3, 7, 0.78) 86%,
+                #050307 100%
+            ),
+            url("hero-cinema.png") !important;
+
+        background-size: auto 86% !important;
+        background-position: left bottom !important;
+        background-repeat: no-repeat !important;
+    }
+}
+
+/* الجوال */
+@media (max-width: 768px) {
+    .hero-cinematic {
+        min-height: 780px !important;
+        padding-top: 165px !important;
+        padding-bottom: 90px !important;
+        background-color: transparent !important;
+
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(5, 3, 7, 0.05) 0%,
+                rgba(5, 3, 7, 0.22) 20%,
+                rgba(5, 3, 7, 0.58) 42%,
+                rgba(5, 3, 7, 0.90) 64%,
+                rgba(5, 3, 7, 0.98) 82%,
+                #050307 100%
+            ),
+            url("hero-cinema.png") !important;
+
+        background-size: auto 42% !important;
+        background-position: center 100px !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .hero-cinematic::after {
+        content: "" !important;
+        position: absolute !important;
+        inset: 0 !important;
+        pointer-events: none !important;
+        z-index: 1 !important;
+
+        background:
+            radial-gradient(
+                circle at 50% 35%,
+                rgba(253, 139, 0, 0.14),
+                transparent 36%
+            ),
+            linear-gradient(
+                to bottom,
+                transparent 0%,
+                rgba(5, 3, 7, 0.20) 35%,
+                rgba(5, 3, 7, 0.82) 58%,
+                #050307 100%
+            ) !important;
+    }
+
+    .hero-cinematic > div {
+        position: relative !important;
+        z-index: 2 !important;
+    }
+}
     </style>
 </head>
 <body class="text-on-surface selection:bg-primary selection:text-white">
